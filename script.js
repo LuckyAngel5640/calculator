@@ -42,7 +42,7 @@ function handleSymbol(symbol){
             }
             break;
             case '+':
-            case '-':
+            case '−':
             case '×':
             case '÷':
                 handleMath(symbol);
@@ -77,7 +77,7 @@ function flushOperation(intBuffer){
     if(perv === '+'){
         runningTotal += intBuffer;
 
-    }else if(perv === '-'){
+    }else if(perv === '−'){
         runningTotal -= intBuffer;
 
     }else if(perv === '×'){
@@ -100,7 +100,7 @@ function handleNumber(numberString){
 
 
 function init(){
-    document.querySelector('.Bb').addEventListener('click', function(event){
+    document.querySelector('.B').addEventListener('click', function(event){
         buttonClick(event.target.innerText);  
     })
 
